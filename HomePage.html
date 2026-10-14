@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- Your Custom CSS -->
+    <link rel="stylesheet" href="./styles/HomePage.css">
+</head>
+
+<body>
+
+    <!-- Header / Navbar -->
+    <header class="site-header">
+        <div class="container">
+            <nav class="site-nav bracket" aria-label="Main navigation">
+
+                <!-- Logo -->
+                <a class="site-brand" href="#" aria-label="Home">
+                    <img src="./media/shoe.jpg" alt="Logo" width="36" height="36">
+                </a>
+
+                <!-- Navigation Links -->
+                <ul class="site-links">
+                    <li><a class="active" href="#" aria-current="page">Home</a></li>
+                    <li><a href="#">Pharmacy</a></li>
+                    <li><a href="#">Category</a></li>
+                    <li><a href="#">Brand</a></li>
+                </ul>
+
+                <!-- Right-side Icons -->
+                <div class="site-actions">
+                    <a href="#" class="icon-btn" aria-label="Bookmarks">
+                        <i class="bi bi-bookmark"></i>
+                    </a>
+
+                    <a href="#" class="icon-btn" aria-label="Cart">
+                        <i class="bi bi-cart3"></i>
+                    </a>
+
+                    <a href="#" class="btn btn-primary">Login</a>
+                </div>
+
+            </nav>
+        </div>
+    </header>
+
+    <main class="container page-main">
+
+        <!-- Search Bar Below Navbar -->
+        <section class="panel bracket search-panel" aria-label="Search">
+            <form class="search-form" role="search">
+                <input class="form-control search-input" type="search"
+                    placeholder="Search medicines, categories..." aria-label="Search medicines">
+
+                <button class="btn btn-primary" type="submit" aria-label="Search">
+                    <i class="bi bi-search"></i>
+                </button>
+            </form>
+        </section>
+
+        <!-- Carousel section -->
+        <section class="panel bracket" aria-label="Featured">
+            <div class="panel-body panel-body-tight">
+                <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+
+                        <div class="carousel-item active" data-bs-interval="2000">
+                            <img src="./media/headphones.jpg" class="d-block w-100 carousel-img" alt="Headphones">
+                        </div>
+
+                        <div class="carousel-item" data-bs-interval="4000">
+                            <img src="./media/speaker.jpg" class="d-block w-100 carousel-img" alt="Speaker">
+                        </div>
+
+                        <div class="carousel-item" data-bs-interval="6000">
+                            <img src="./media/earbuds.jpg" class="d-block w-100 carousel-img" alt="Earbuds">
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Doctor Carousel Section -->
+        <section class="panel bracket" aria-label="Doctors">
+
+            <div class="panel-head">
+                <h2 class="panel-title">Doctors</h2>
+
+                <div class="panel-actions">
+                    <button class="btn btn-outline-primary btn-sm" type="button"
+                        data-bs-target="#carouselMultiple" data-bs-slide="prev" aria-label="Previous">
+                        <i class="bi bi-chevron-left"></i>
+                    </button>
+
+                    <button class="btn btn-outline-primary btn-sm" type="button"
+                        data-bs-target="#carouselMultiple" data-bs-slide="next" aria-label="Next">
+                        <i class="bi bi-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="panel-body">
+                <div id="carouselMultiple" class="carousel slide">
+                    <div class="carousel-inner">
+
+                        <div class="carousel-item active">
+                            <div class="row g-3 justify-content-center">
+                                <div class="col-6 col-md-4 col-lg">
+                                    <div class="doctor-card">
+                                        <img src="./media/headphones.jpg" class="doctor-img" alt="Doctor 1">
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-4 col-lg">
+                                    <div class="doctor-card">
+                                        <img src="./media/shoe.jpg" class="doctor-img" alt="Doctor 2">
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-4 col-lg">
+                                    <div class="doctor-card">
+                                        <img src="./media/watches.jpg" class="doctor-img" alt="Doctor 3">
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-4 col-lg">
+                                    <div class="doctor-card">
+                                        <img src="./media/earbuds.jpg" class="doctor-img" alt="Doctor 4">
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-4 col-lg">
+                                    <div class="doctor-card">
+                                        <img src="./media/speaker.jpg" class="doctor-img" alt="Doctor 5">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <div class="row g-3 justify-content-center">
+                                <div class="col-6 col-md-4 col-lg">
+                                    <div class="doctor-card">
+                                        <img src="./media/shoe.jpg" class="doctor-img" alt="Doctor 6">
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-4 col-lg">
+                                    <div class="doctor-card">
+                                        <img src="./media/watches.jpg" class="doctor-img" alt="Doctor 7">
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-4 col-lg">
+                                    <div class="doctor-card">
+                                        <img src="./media/headphones.jpg" class="doctor-img" alt="Doctor 8">
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-4 col-lg">
+                                    <div class="doctor-card">
+                                        <img src="./media/speaker.jpg" class="doctor-img" alt="Doctor 9">
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-4 col-lg">
+                                    <div class="doctor-card">
+                                        <img src="./media/earbuds.jpg" class="doctor-img" alt="Doctor 10">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Pharmacy Home Section -->
+
+        <!-- Banner -->
+        <section class="panel bracket pharmacy-banner" aria-label="Pharmacy banner">
+            <div class="banner-image">
+                <img src="./media/pharmacy-banner.jpg" alt="Everyday pharmacy essentials">
+            </div>
+
+            <div class="banner-content">
+                <p class="banner-tag">YOUR EVERYDAY HEALTH PARTNER</p>
+                <h2>Everyday Essentials.</h2>
+                <h3>Trusted Quality. The Right Place.</h3>
+                <p class="banner-text">Everyday healthcare essentials, all in one place.</p>
+            </div>
+        </section>
+
+        <!-- Category Circles -->
+        <section class="panel bracket" aria-label="Shop by category and everyday essentials">
+            <div class="panel-head">
+                <h2 class="panel-title">Shop by Category</h2>
+            </div>
+
+            <div class="panel-body panel-body-flush">
+                <div class="category-list">
+
+                    <a href="#" class="category-item">
+                        <div class="category-circle">
+                            <img src="./media/medicines.jpg" alt="Medicines">
+                        </div>
+                        <span>Medicines</span>
+                    </a>
+
+                    <a href="#" class="category-item">
+                        <div class="category-circle">
+                            <img src="./media/vitamins.jpg" alt="Vitamins">
+                        </div>
+                        <span>Vitamins</span>
+                    </a>
+
+                    <a href="#" class="category-item">
+                        <div class="category-circle">
+                            <img src="./media/skincare.jpg" alt="Skincare">
+                        </div>
+                        <span>Skincare</span>
+                    </a>
+
+                    <a href="#" class="category-item">
+                        <div class="category-circle">
+                            <img src="./media/first-aid.jpg" alt="First aid">
+                        </div>
+                        <span>First Aid</span>
+                    </a>
+
+                    <a href="#" class="category-item">
+                        <div class="category-circle">
+                            <img src="./media/personal-care.jpg" alt="Personal care">
+                        </div>
+                        <span>Personal Care</span>
+                    </a>
+
+                </div>
+            </div>
+
+            <div class="panel-head panel-head-sub">
+                <h2 class="panel-title">Everyday Essentials</h2>
+            </div>
+
+            <div class="panel-body">
+                <div class="row g-3">
+
+                    <!-- Product 1 -->
+                    <div class="col-6 col-lg-3">
+                        <article class="card pharmacy-product h-100">
+
+                            <div class="product-image">
+                                <img src="./media/vitamin-c.jpg" alt="Vitamin C tablets">
+                                <span class="offer-badge">BUY 3, +2% OFF</span>
+                            </div>
+
+                            <div class="card-body">
+                                <h3 class="card-title">Vitamin C Tablets</h3>
+                                <p class="product-capacity">60 Tablets</p>
+
+                                <div class="product-pricing">
+                                    <span class="mrp">MRP ₹500</span>
+                                    <span class="discount">50% OFF</span>
+                                </div>
+
+                                <p class="selling-price">₹250</p>
+                            </div>
+
+                        </article>
+                    </div>
+
+                    <!-- Product 2 -->
+                    <div class="col-6 col-lg-3">
+                        <article class="card pharmacy-product h-100">
+
+                            <div class="product-image">
+                                <img src="./media/skincare-product.jpg" alt="Skincare cream">
+                                <span class="offer-badge">BUY 3, +2% OFF</span>
+                            </div>
+
+                            <div class="card-body">
+                                <h3 class="card-title">Daily Care Cream</h3>
+                                <p class="product-capacity">100 g</p>
+
+                                <div class="product-pricing">
+                                    <span class="mrp">MRP ₹400</span>
+                                    <span class="discount">50% OFF</span>
+                                </div>
+
+                                <p class="selling-price">₹200</p>
+                            </div>
+
+                        </article>
+                    </div>
+
+                    <!-- Product 3 -->
+                    <div class="col-6 col-lg-3">
+                        <article class="card pharmacy-product h-100">
+
+                            <div class="product-image">
+                                <img src="./media/first-aid-kit.jpg" alt="First aid kit">
+                                <span class="offer-badge">BUY 3, +2% OFF</span>
+                            </div>
+
+                            <div class="card-body">
+                                <h3 class="card-title">First Aid Kit</h3>
+                                <p class="product-capacity">1 Kit</p>
+
+                                <div class="product-pricing">
+                                    <span class="mrp">MRP ₹600</span>
+                                    <span class="discount">50% OFF</span>
+                                </div>
+
+                                <p class="selling-price">₹300</p>
+                            </div>
+
+                        </article>
+                    </div>
+
+                    <!-- Product 4 -->
+                    <div class="col-6 col-lg-3">
+                        <article class="card pharmacy-product h-100">
+
+                            <div class="product-image">
+                                <img src="./media/personal-care-product.jpg" alt="Personal care product">
+                                <span class="offer-badge">BUY 3, +2% OFF</span>
+                            </div>
+
+                            <div class="card-body">
+                                <h3 class="card-title">Personal Care Pack</h3>
+                                <p class="product-capacity">200 ml</p>
+
+                                <div class="product-pricing">
+                                    <span class="mrp">MRP ₹300</span>
+                                    <span class="discount">50% OFF</span>
+                                </div>
+
+                                <p class="selling-price">₹150</p>
+                            </div>
+
+                        </article>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Product Section -->
+
+
+        <!-- Shop by Age & Gender (separate container) -->
+        <section class="panel bracket" aria-label="Shop by age and gender">
+            <div class="panel-body panel-body-flush">
+                <div class="category-list category-list-4">
+
+                    <a href="#" class="category-item">
+                        <div class="category-circle">
+                            <img src="./media/men.jpg" alt="Men">
+                        </div>
+                        <span class="category-label">Men<small class="category-age">(18-45 yrs)</small></span>
+                    </a>
+
+                    <a href="#" class="category-item">
+                        <div class="category-circle">
+                            <img src="./media/women.jpg" alt="Women">
+                        </div>
+                        <span class="category-label">Women<small class="category-age">(18-45 yrs)</small></span>
+                    </a>
+
+                    <a href="#" class="category-item">
+                        <div class="category-circle">
+                            <img src="./media/senior-men.jpg" alt="Senior men">
+                        </div>
+                        <span class="category-label">Sr. Men<small class="category-age">(&gt;45 yrs)</small></span>
+                    </a>
+
+                    <a href="#" class="category-item">
+                        <div class="category-circle">
+                            <img src="./media/senior-women.jpg" alt="Senior women">
+                        </div>
+                        <span class="category-label">Sr. Women<small class="category-age">(&gt;45 yrs)</small></span>
+                    </a>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Pharmacy Certificates -->
+        <section class="panel bracket" aria-label="Pharmacy certificates">
+            <div class="panel-head">
+                <h2 class="panel-title">Our Certificates</h2>
+            </div>
+
+            <div class="panel-body">
+                <div class="row g-3">
+
+                    <div class="col-6 col-lg-3">
+                        <figure class="certificate-card">
+                            <div class="certificate-frame">
+                                <img src="./media/certificate-drug-license.jpg" alt="Drug license certificate">
+                            </div>
+                            <figcaption class="certificate-caption">Drug License</figcaption>
+                        </figure>
+                    </div>
+
+                    <div class="col-6 col-lg-3">
+                        <figure class="certificate-card">
+                            <div class="certificate-frame">
+                                <img src="./media/certificate-pharmacy-registration.jpg" alt="Pharmacy registration certificate">
+                            </div>
+                            <figcaption class="certificate-caption">Pharmacy Registration</figcaption>
+                        </figure>
+                    </div>
+
+                    <div class="col-6 col-lg-3">
+                        <figure class="certificate-card">
+                            <div class="certificate-frame">
+                                <img src="./media/certificate-gst.jpg" alt="GST registration certificate">
+                            </div>
+                            <figcaption class="certificate-caption">GST Registration</figcaption>
+                        </figure>
+                    </div>
+
+                    <div class="col-6 col-lg-3">
+                        <figure class="certificate-card">
+                            <div class="certificate-frame">
+                                <img src="./media/certificate-iso.jpg" alt="ISO certification">
+                            </div>
+                            <figcaption class="certificate-caption">ISO 9001:2015</figcaption>
+                        </figure>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="panel bracket footer-panel">
+
+                <div class="footer-grid">
+
+                    <div class="footer-col footer-about">
+                        <a class="site-brand" href="#" aria-label="Home">
+                            <img src="./media/shoe.jpg" alt="Logo" width="36" height="36">
+                        </a>
+                        <p class="footer-text">Everyday healthcare essentials, all in one place.</p>
+                        <div class="footer-social">
+                            <a href="#" class="icon-btn" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                            <a href="#" class="icon-btn" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                            <a href="#" class="icon-btn" aria-label="X"><i class="bi bi-twitter-x"></i></a>
+                            <a href="#" class="icon-btn" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+                        </div>
+                    </div>
+
+                    <nav class="footer-col" aria-label="Quick links">
+                        <h2 class="footer-title">Quick Links</h2>
+                        <ul class="footer-links">
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Pharmacy</a></li>
+                            <li><a href="#">Category</a></li>
+                            <li><a href="#">Brand</a></li>
+                        </ul>
+                    </nav>
+
+                    <nav class="footer-col" aria-label="Shop categories">
+                        <h2 class="footer-title">Categories</h2>
+                        <ul class="footer-links">
+                            <li><a href="#">Medicines</a></li>
+                            <li><a href="#">Vitamins</a></li>
+                            <li><a href="#">Skincare</a></li>
+                            <li><a href="#">First Aid</a></li>
+                            <li><a href="#">Personal Care</a></li>
+                        </ul>
+                    </nav>
+
+                    <div class="footer-col footer-contact-col">
+                        <h2 class="footer-title">Contact</h2>
+                        <ul class="footer-contact">
+                            <li><i class="bi bi-geo-alt"></i><span>Your address, City, State, India</span></li>
+                            <li><i class="bi bi-telephone"></i><a href="tel:+910000000000">+91 00000 00000</a></li>
+                            <li><i class="bi bi-envelope"></i><a href="mailto:support@yourpharmacy.com">support@yourpharmacy.com</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+
+                <div class="footer-bottom">
+                    <p class="footer-copy">&copy; 2026 Pharmacy. All rights reserved.</p>
+                    <ul class="footer-legal">
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Use</a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

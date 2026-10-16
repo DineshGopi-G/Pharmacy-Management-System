@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amoxicillin 500 mg - Pharmacy</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- Shared theme (same file as the home page) -->
+    <link rel="stylesheet" href="./styles/HomePage.css">
+
+    <!-- Product page extras (load after the shared theme) -->
+    <link rel="stylesheet" href="./styles/ProductPage.css">
+</head>
+
+<body>
+
+    <!-- =====================================================
+         HEADER  (navbar + search bar)
+         ===================================================== -->
+    <header class="site-header">
+        <div class="container">
+
+            <nav class="site-nav bracket" aria-label="Main navigation">
+
+                <!-- Logo -->
+                <a class="site-brand" href="#" aria-label="Home">
+                    <img src="./media/shoe.jpg" alt="Logo" width="36" height="36">
+                </a>
+
+                <!-- Navigation Links -->
+                <ul class="site-links">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Pharmacy</a></li>
+                    <li><a href="#">Category</a></li>
+                    <li><a href="#">Brand</a></li>
+                </ul>
+
+                <!-- Right-side Icons -->
+                <div class="site-actions">
+                    <a href="#" class="icon-btn" aria-label="Bookmarks">
+                        <i class="bi bi-bookmark"></i>
+                    </a>
+
+                    <a href="#" class="icon-btn" aria-label="Cart">
+                        <i class="bi bi-cart3"></i>
+                    </a>
+
+                    <a href="#" class="btn btn-primary">Login</a>
+                </div>
+
+            </nav>
+
+            <!-- Search Bar -->
+            <section class="panel bracket search-panel" aria-label="Search">
+                <form class="search-form" role="search">
+                    <input class="form-control search-input" type="search"
+                        placeholder="Search medicines, categories..." aria-label="Search medicines">
+
+                    <button class="btn btn-primary" type="submit" aria-label="Search">
+                        <i class="bi bi-search"></i>
+                    </button>
+                </form>
+            </section>
+
+        </div>
+    </header>
+
+    <!-- =====================================================
+         MAIN CONTENT
+         ===================================================== -->
+    <main class="container page-main">
+
+        <h1 class="visually-hidden">Amoxicillin 500 mg</h1>
+
+        <!-- Breadcrumb -->
+        <nav class="crumbs" aria-label="Breadcrumb">
+            <ol class="crumb-list">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Category</a></li>
+                <li><a href="#">Medicines</a></li>
+                <li aria-current="page">Amoxicillin 500 mg</li>
+            </ol>
+        </nav>
+
+        <!-- =================================================
+             MAIN PRODUCT
+             data-rx="true"  -> prescription needed (upload shown, Add to Cart locked until a file is chosen)
+             data-rx="false" -> no prescription needed (upload hidden, Add to Cart ready)
+             ================================================= -->
+        <section class="panel bracket product-main" id="productMain" data-rx="true" aria-label="Product">
+            <div class="product-layout">
+
+                <!-- Gallery -->
+                <div class="product-gallery">
+                    <div class="gallery-stage">
+                        <img src="./media/vitamin-c.jpg" alt="Amoxicillin 500 mg" id="galleryMain">
+                        <span class="offer-badge">BUY 3, +2% OFF</span>
+                        <span class="rx-chip is-required gallery-rx rx-only">Rx</span>
+                    </div>
+
+                    <div class="gallery-thumbs" role="group" aria-label="Product images">
+                        <button class="thumb active" type="button" data-src="./media/vitamin-c.jpg" aria-label="View image 1">
+                            <img src="./media/vitamin-c.jpg" alt="">
+                        </button>
+                        <button class="thumb" type="button" data-src="./media/skincare-product.jpg" aria-label="View image 2">
+                            <img src="./media/skincare-product.jpg" alt="">
+                        </button>
+                        <button class="thumb" type="button" data-src="./media/first-aid-kit.jpg" aria-label="View image 3">
+                            <img src="./media/first-aid-kit.jpg" alt="">
+                        </button>
+                        <button class="thumb" type="button" data-src="./media/personal-care-product.jpg" aria-label="View image 4">
+                            <img src="./media/personal-care-product.jpg" alt="">
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Details -->
+                <div class="product-info">
+
+                    <p class="product-brand">CAREWELL</p>
+                    <h2 class="product-heading">Amoxicillin 500 mg</h2>
+                    <p class="product-pack">10 Capsules</p>
+
+                    <div class="price-block">
+                        <p class="price-now" id="priceNow">₹96</p>
+                        <div class="price-meta">
+                            <span class="price-mrp">MRP ₹120</span>
+                            <span class="price-off">20% OFF</span>
+                        </div>
+                    </div>
+                    <p class="price-tax">Inclusive of all taxes</p>
+
+                    <!-- Prescription needed -->
+                    <div class="rx-box rx-only">
+                        <div class="rx-head">
+                            <span class="rx-chip is-required">Rx</span>
+                            <h3 class="rx-title">Prescription required</h3>
+                        </div>
+                        <p class="rx-text">
+                            This medicine is sold only against a valid prescription from a registered doctor.
+                            Upload a clear photo or PDF (JPG, PNG or PDF, up to 5 MB).
+                        </p>
+
+                        <div class="rx-upload">
+                            <input class="visually-hidden rx-input" type="file" id="rxFile" accept=".jpg,.jpeg,.png,.pdf">
+                            <label class="btn btn-outline-primary rx-pick" for="rxFile">
+                                <i class="bi bi-upload"></i>Upload Prescription
+                            </label>
+                            <span class="rx-file" id="rxFileName">No file chosen</span>
+                            <button class="rx-clear" type="button" id="rxClear" hidden>Remove</button>
+                        </div>
+                        <p class="rx-status" id="rxStatus" role="status" aria-live="polite"></p>
+                    </div>
+
+                    <!-- No prescription needed -->
+                    <div class="otc-box otc-only">
+                        <span class="rx-chip is-otc">No Rx</span>
+                        <p class="otc-text">No prescription needed for this product.</p>
+                    </div>
+
+                    <!-- Quantity + actions -->
+                    <div class="buy-row">
+                        <div class="cart-qty" role="group" aria-label="Quantity">
+                            <button class="qty-btn" type="button" data-action="dec" aria-label="Decrease quantity">
+                                <i class="bi bi-dash"></i>
+                            </button>
+                            <output class="qty-value" id="qtyValue">1</output>
+                            <button class="qty-btn" type="button" data-action="inc" aria-label="Increase quantity">
+                                <i class="bi bi-plus"></i>
+                            </button>
+                        </div>
+
+                        <button class="btn btn-primary buy-add" type="button" id="addBtn">
+                            <i class="bi bi-cart-plus"></i><span>Add to Cart</span>
+                        </button>
+
+                        <button class="bookmark-toggle" type="button" id="saveBtn"
+                            aria-pressed="false" aria-label="Save this product">
+                            <i class="bi bi-bookmark"></i>
+                        </button>
+                    </div>
+
+                    <p class="buy-hint" id="buyHint" hidden>Upload a valid prescription to add this item to your cart.</p>
+
+                    <ul class="perk-list">
+                        <li><i class="bi bi-truck"></i><span>Free delivery on orders above ₹199</span></li>
+                        <li class="rx-only"><i class="bi bi-file-earmark-medical"></i><span>Your prescription is checked before dispatch</span></li>
+                    </ul>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Product details -->
+        <section class="panel bracket" aria-label="Product details">
+            <div class="panel-head">
+                <h2 class="panel-title">Product Details</h2>
+            </div>
+
+            <div class="panel-body">
+                <dl class="spec-list">
+                    <div class="spec-row">
+                        <dt>Brand</dt>
+                        <dd>CareWell</dd>
+                    </div>
+                    <div class="spec-row">
+                        <dt>Form</dt>
+                        <dd>Capsule</dd>
+                    </div>
+                    <div class="spec-row">
+                        <dt>Pack Size</dt>
+                        <dd>10 Capsules</dd>
+                    </div>
+                    <div class="spec-row">
+                        <dt>Prescription</dt>
+                        <dd>Required</dd>
+                    </div>
+                    <div class="spec-row">
+                        <dt>Storage</dt>
+                        <dd>Store in a cool, dry place, away from direct sunlight.</dd>
+                    </div>
+                </dl>
+
+                <p class="spec-note">Read the label before use and take this medicine only as directed by your doctor or pharmacist.</p>
+            </div>
+        </section>
+
+        <!-- Related products -->
+        <section class="panel bracket" aria-label="Related products">
+            <div class="panel-head">
+                <h2 class="panel-title">Related Products</h2>
+
+                <ul class="rx-legend" aria-label="Legend">
+                    <li><span class="rx-chip is-required">Rx</span>Prescription needed</li>
+                    <li><span class="rx-chip is-otc">No Rx</span>No prescription needed</li>
+                </ul>
+            </div>
+
+            <div class="panel-body">
+                <div class="row g-3" id="relatedGrid">
+
+                    <!-- Related 1: no prescription -->
+                    <div class="col-6 col-lg-3">
+                        <article class="card pharmacy-product h-100">
+
+                            <div class="product-image">
+                                <img src="./media/vitamin-c.jpg" alt="Paracetamol 500 mg">
+                                <span class="offer-badge">BUY 3, +2% OFF</span>
+                            </div>
+
+                            <div class="card-body">
+                                <h3 class="card-title">Paracetamol 500 mg</h3>
+                                <p class="product-capacity">15 Tablets</p>
+
+                                <div class="product-pricing">
+                                    <span class="mrp">MRP ₹40</span>
+                                    <span class="discount">50% OFF</span>
+                                </div>
+
+                                <p class="selling-price">₹20</p>
+
+                                <p class="rx-line"><span class="rx-chip is-otc">No Rx</span>Not needed</p>
+
+                                <div class="product-actions">
+                                    <button class="btn btn-primary cart-add" type="button" data-action="add">
+                                        <i class="bi bi-cart-plus"></i><span>Add to Cart</span>
+                                    </button>
+                                </div>
+                            </div>
+
+                        </article>
+                    </div>
+
+                    <!-- Related 2: prescription needed -->
+                    <div class="col-6 col-lg-3">
+                        <article class="card pharmacy-product h-100">
+
+                            <div class="product-image">
+                                <img src="./media/skincare-product.jpg" alt="Azithromycin 500 mg">
+                                <span class="offer-badge">BUY 3, +2% OFF</span>
+                                <span class="rx-chip is-required card-rx">Rx</span>
+                            </div>
+
+                            <div class="card-body">
+                                <h3 class="card-title">Azithromycin 500 mg</h3>
+                                <p class="product-capacity">5 Tablets</p>
+
+                                <div class="product-pricing">
+                                    <span class="mrp">MRP ₹110</span>
+                                    <span class="discount">18% OFF</span>
+                                </div>
+
+                                <p class="selling-price">₹90</p>
+
+                                <p class="rx-line"><span class="rx-chip is-required">Rx</span>Prescription needed</p>
+
+                                <div class="product-actions">
+                                    <a href="#" class="btn btn-outline-primary cart-add">
+                                        <i class="bi bi-file-earmark-arrow-up"></i><span>Upload Rx</span>
+                                    </a>
+                                </div>
+                            </div>
+
+                        </article>
+                    </div>
+
+                    <!-- Related 3: no prescription -->
+                    <div class="col-6 col-lg-3">
+                        <article class="card pharmacy-product h-100">
+
+                            <div class="product-image">
+                                <img src="./media/first-aid-kit.jpg" alt="Cetirizine 10 mg">
+                                <span class="offer-badge">BUY 3, +2% OFF</span>
+                            </div>
+
+                            <div class="card-body">
+                                <h3 class="card-title">Cetirizine 10 mg</h3>
+                                <p class="product-capacity">10 Tablets</p>
+
+                                <div class="product-pricing">
+                                    <span class="mrp">MRP ₹35</span>
+                                    <span class="discount">14% OFF</span>
+                                </div>
+
+                                <p class="selling-price">₹30</p>
+
+                                <p class="rx-line"><span class="rx-chip is-otc">No Rx</span>Not needed</p>
+
+                                <div class="product-actions">
+                                    <button class="btn btn-primary cart-add" type="button" data-action="add">
+                                        <i class="bi bi-cart-plus"></i><span>Add to Cart</span>
+                                    </button>
+                                </div>
+                            </div>
+
+                        </article>
+                    </div>
+
+                    <!-- Related 4: prescription needed -->
+                    <div class="col-6 col-lg-3">
+                        <article class="card pharmacy-product h-100">
+
+                            <div class="product-image">
+                                <img src="./media/personal-care-product.jpg" alt="Pantoprazole 40 mg">
+                                <span class="offer-badge">BUY 3, +2% OFF</span>
+                                <span class="rx-chip is-required card-rx">Rx</span>
+                            </div>
+
+                            <div class="card-body">
+                                <h3 class="card-title">Pantoprazole 40 mg</h3>
+                                <p class="product-capacity">10 Tablets</p>
+
+                                <div class="product-pricing">
+                                    <span class="mrp">MRP ₹150</span>
+                                    <span class="discount">20% OFF</span>
+                                </div>
+
+                                <p class="selling-price">₹120</p>
+
+                                <p class="rx-line"><span class="rx-chip is-required">Rx</span>Prescription needed</p>
+
+                                <div class="product-actions">
+                                    <a href="#" class="btn btn-outline-primary cart-add">
+                                        <i class="bi bi-file-earmark-arrow-up"></i><span>Upload Rx</span>
+                                    </a>
+                                </div>
+                            </div>
+
+                        </article>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="panel bracket footer-panel">
+
+                <div class="footer-grid">
+
+                    <div class="footer-col footer-about">
+                        <a class="site-brand" href="#" aria-label="Home">
+                            <img src="./media/shoe.jpg" alt="Logo" width="36" height="36">
+                        </a>
+                        <p class="footer-text">Everyday healthcare essentials, all in one place.</p>
+                        <div class="footer-social">
+                            <a href="#" class="icon-btn" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                            <a href="#" class="icon-btn" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                            <a href="#" class="icon-btn" aria-label="X"><i class="bi bi-twitter-x"></i></a>
+                            <a href="#" class="icon-btn" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+                        </div>
+                    </div>
+
+                    <nav class="footer-col" aria-label="Quick links">
+                        <h2 class="footer-title">Quick Links</h2>
+                        <ul class="footer-links">
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Pharmacy</a></li>
+                            <li><a href="#">Category</a></li>
+                            <li><a href="#">Brand</a></li>
+                        </ul>
+                    </nav>
+
+                    <nav class="footer-col" aria-label="Shop categories">
+                        <h2 class="footer-title">Categories</h2>
+                        <ul class="footer-links">
+                            <li><a href="#">Medicines</a></li>
+                            <li><a href="#">Vitamins</a></li>
+                            <li><a href="#">Skincare</a></li>
+                            <li><a href="#">First Aid</a></li>
+                            <li><a href="#">Personal Care</a></li>
+                        </ul>
+                    </nav>
+
+                    <div class="footer-col footer-contact-col">
+                        <h2 class="footer-title">Contact</h2>
+                        <ul class="footer-contact">
+                            <li><i class="bi bi-geo-alt"></i><span>Your address, City, State, India</span></li>
+                            <li><i class="bi bi-telephone"></i><a href="tel:+910000000000">+91 00000 00000</a></li>
+                            <li><i class="bi bi-envelope"></i><a href="mailto:support@yourpharmacy.com">support@yourpharmacy.com</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+
+                <div class="footer-bottom">
+                    <p class="footer-copy">&copy; 2026 Pharmacy. All rights reserved.</p>
+                    <ul class="footer-legal">
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Use</a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Product behaviour: gallery, quantity, prescription upload, add to cart -->
+    <script>
+        (function () {
+            var MAX_SIZE = 5 * 1024 * 1024;
+            var ALLOWED = ['image/jpeg', 'image/png', 'application/pdf'];
+
+            var main = document.getElementById('productMain');
+            var needsRx = main.dataset.rx === 'true';
+
+            var galleryMain = document.getElementById('galleryMain');
+            var qtyEl = document.getElementById('qtyValue');
+            var addBtn = document.getElementById('addBtn');
+            var saveBtn = document.getElementById('saveBtn');
+            var hint = document.getElementById('buyHint');
+
+            var rxFile = document.getElementById('rxFile');
+            var rxName = document.getElementById('rxFileName');
+            var rxClear = document.getElementById('rxClear');
+            var rxStatus = document.getElementById('rxStatus');
+
+            function setAdded(btn, added) {
+                btn.classList.toggle('is-added', added);
+                btn.querySelector('i').className = added ? 'bi bi-check2' : 'bi bi-cart-plus';
+                btn.querySelector('span').textContent = added ? 'In Cart' : 'Add to Cart';
+            }
+
+            function hasPrescription() {
+                return rxFile.files && rxFile.files.length > 0;
+            }
+
+            function refreshAddState() {
+                var locked = needsRx && !hasPrescription();
+                addBtn.disabled = locked;
+                hint.hidden = !locked;
+                if (locked) setAdded(addBtn, false);
+            }
+
+            // Gallery thumbnails
+            document.querySelector('.gallery-thumbs').addEventListener('click', function (e) {
+                var thumb = e.target.closest('.thumb');
+                if (!thumb) return;
+                galleryMain.src = thumb.dataset.src;
+                document.querySelectorAll('.thumb').forEach(function (t) {
+                    t.classList.toggle('active', t === thumb);
+                });
+            });
+
+            // Quantity
+            document.querySelector('.buy-row .cart-qty').addEventListener('click', function (e) {
+                var btn = e.target.closest('[data-action]');
+                if (!btn) return;
+                var qty = parseInt(qtyEl.textContent, 10);
+                qtyEl.textContent = btn.dataset.action === 'inc' ? Math.min(qty + 1, 10) : Math.max(qty - 1, 1);
+            });
+
+            // Prescription upload
+            function clearRx(message, isError) {
+                rxFile.value = '';
+                rxName.textContent = 'No file chosen';
+                rxClear.hidden = true;
+                rxStatus.textContent = message || '';
+                rxStatus.className = 'rx-status' + (isError ? ' is-error' : '');
+                refreshAddState();
+            }
+
+            rxFile.addEventListener('change', function () {
+                var file = rxFile.files[0];
+                if (!file) { clearRx(); return; }
+
+                if (ALLOWED.indexOf(file.type) === -1) {
+                    clearRx('Upload a JPG, PNG or PDF file.', true);
+                    return;
+                }
+                if (file.size > MAX_SIZE) {
+                    clearRx('File is too large. Maximum size is 5 MB.', true);
+                    return;
+                }
+
+                rxName.textContent = file.name;
+                rxClear.hidden = false;
+                rxStatus.textContent = 'Prescription attached.';
+                rxStatus.className = 'rx-status is-success';
+                refreshAddState();
+            });
+
+            rxClear.addEventListener('click', function () {
+                clearRx();
+            });
+
+            // Add to cart (main product)
+            addBtn.addEventListener('click', function () {
+                if (addBtn.disabled) return;
+                setAdded(addBtn, !addBtn.classList.contains('is-added'));
+            });
+
+            // Save / bookmark
+            saveBtn.addEventListener('click', function () {
+                var saved = saveBtn.getAttribute('aria-pressed') !== 'true';
+                saveBtn.setAttribute('aria-pressed', saved ? 'true' : 'false');
+                saveBtn.setAttribute('aria-label', saved ? 'Remove from saved items' : 'Save this product');
+                saveBtn.querySelector('i').className = saved ? 'bi bi-bookmark-fill' : 'bi bi-bookmark';
+            });
+
+            // Related products: add to cart (no-Rx items only have this button)
+            document.getElementById('relatedGrid').addEventListener('click', function (e) {
+                var btn = e.target.closest('[data-action="add"]');
+                if (btn) setAdded(btn, !btn.classList.contains('is-added'));
+            });
+
+            refreshAddState();
+        })();
+    </script>
+
+</body>
+
+</html>

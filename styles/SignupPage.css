@@ -1,0 +1,107 @@
+/* =========================================================
+   SignupPage.css
+   Extras for the Sign Up page. Load AFTER HomePage.css and
+   LoginPage.css (those hold tokens, panels, navbar, footer,
+   breadcrumb, auth layout and form fields).
+   ========================================================= */
+
+/* Mobile number prefix (+91) */
+.field-prefix {
+    font-family: var(--font-mono);
+    font-size: 13px;
+    color: var(--ink);
+    background: var(--panel-alt);
+    border: 1px solid var(--line-strong);
+    border-radius: 2px 0 0 2px;
+}
+
+.input-group > .field-input.field-input-joined {
+    border-radius: 0 2px 2px 0;
+}
+
+/* Two fields side by side (password + confirm) */
+.auth-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0 16px;
+}
+
+.auth-grid .auth-field {
+    min-width: 0;
+}
+
+/* ---------- Password strength meter ---------- */
+.strength {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 4px;
+    margin-top: 10px;
+}
+
+.strength-bar {
+    height: 4px;
+    background: var(--line);
+}
+
+.strength[data-level="1"] .strength-bar:nth-child(-n + 1) {
+    background: var(--danger);
+}
+
+.strength[data-level="2"] .strength-bar:nth-child(-n + 2),
+.strength[data-level="3"] .strength-bar:nth-child(-n + 3) {
+    background: var(--ink);
+}
+
+.strength[data-level="4"] .strength-bar {
+    background: var(--accent);
+}
+
+.strength-label {
+    margin: 6px 0 0;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.04em;
+    color: var(--muted);
+}
+
+/* ---------- Terms checkbox ---------- */
+.auth-terms {
+    margin-bottom: 18px;
+}
+
+.auth-terms .auth-check {
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+.auth-terms .auth-check .form-check-input {
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.auth-terms .invalid-feedback {
+    flex: 0 0 100%;
+    margin-top: 2px;
+}
+
+.terms-label {
+    flex: 1 1 0;
+    min-width: 0;
+    font-size: 12px;
+    line-height: 1.5;
+    letter-spacing: 0;
+    text-transform: none;
+}
+
+.terms-label .auth-link {
+    font-size: 12px;
+    letter-spacing: 0;
+    text-transform: none;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 575.98px) {
+    .auth-grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+}

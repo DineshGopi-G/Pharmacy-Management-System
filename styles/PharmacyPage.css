@@ -1,0 +1,1133 @@
+/* =========================================================
+   PharmacyPage.css
+   Blueprint / systems-lab look: warm paper background with a
+   faint grid, hairline panels with corner brackets, monospace
+   micro-labels, black + green accents.
+   ========================================================= */
+
+/* ---------- Design tokens ---------- */
+:root {
+    --bg: #f7f6f2;
+    --panel: #fbfaf7;
+    --panel-alt: #f0efea;
+    --ink: #0f0f0f;
+    --ink-soft: #2a2a28;
+    --muted: #6f6e68;
+    --line: #dcdad2;
+    --line-strong: #a9a79f;
+
+    --accent: #10b981;
+    --accent-ink: #0a7a55;
+    --accent-soft: #e6f6ef;
+    --danger: #c8372d;
+
+    --font-sans: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+
+    --gap: 24px;
+    --pad: 20px;
+}
+
+/* ---------- Base ---------- */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: var(--font-sans);
+    font-size: 15px;
+    color: var(--ink);
+    background-color: var(--bg);
+    background-image:
+        linear-gradient(to right, rgba(15, 15, 15, 0.045) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(15, 15, 15, 0.045) 1px, transparent 1px);
+    background-size: 48px 48px;
+    -webkit-font-smoothing: antialiased;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* One shared content width for every block on the page */
+.container {
+    max-width: 1240px;
+    padding-left: 24px;
+    padding-right: 24px;
+}
+
+.page-main {
+    padding-top: var(--gap);
+    padding-bottom: 56px;
+}
+
+/* ---------- Corner brackets (dark, on panels) ---------- */
+.bracket {
+    position: relative;
+}
+
+.bracket::after {
+    content: "";
+    position: absolute;
+    inset: -1px;
+    pointer-events: none;
+    --b: var(--ink);
+    --l: 14px;
+    background:
+        linear-gradient(var(--b), var(--b)) top left / var(--l) 1px no-repeat,
+        linear-gradient(var(--b), var(--b)) top left / 1px var(--l) no-repeat,
+        linear-gradient(var(--b), var(--b)) top right / var(--l) 1px no-repeat,
+        linear-gradient(var(--b), var(--b)) top right / 1px var(--l) no-repeat,
+        linear-gradient(var(--b), var(--b)) bottom left / var(--l) 1px no-repeat,
+        linear-gradient(var(--b), var(--b)) bottom left / 1px var(--l) no-repeat,
+        linear-gradient(var(--b), var(--b)) bottom right / var(--l) 1px no-repeat,
+        linear-gradient(var(--b), var(--b)) bottom right / 1px var(--l) no-repeat;
+}
+
+/* ---------- Panels ---------- */
+.panel {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    margin-bottom: var(--gap);
+}
+
+.panel-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 16px var(--pad);
+    border-bottom: 1px solid var(--line);
+}
+
+/* Heading with light bracket frame */
+.panel-title {
+    position: relative;
+    display: inline-block;
+    margin: 0;
+    padding: 10px 18px;
+    font-size: clamp(20px, 2.4vw, 28px);
+    font-weight: 500;
+    line-height: 1.15;
+    letter-spacing: -0.03em;
+    color: var(--ink);
+}
+
+.panel-title::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    --b: var(--line-strong);
+    --l: 8px;
+    background:
+        linear-gradient(var(--b), var(--b)) top left / var(--l) 1px no-repeat,
+        linear-gradient(var(--b), var(--b)) top left / 1px var(--l) no-repeat,
+        linear-gradient(var(--b), var(--b)) top right / var(--l) 1px no-repeat,
+        linear-gradient(var(--b), var(--b)) top right / 1px var(--l) no-repeat,
+        linear-gradient(var(--b), var(--b)) bottom left / var(--l) 1px no-repeat,
+        linear-gradient(var(--b), var(--b)) bottom left / 1px var(--l) no-repeat,
+        linear-gradient(var(--b), var(--b)) bottom right / var(--l) 1px no-repeat,
+        linear-gradient(var(--b), var(--b)) bottom right / 1px var(--l) no-repeat;
+}
+
+/* second heading inside a shared panel */
+.panel-head-sub {
+    border-top: 1px solid var(--line);
+}
+
+.panel-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.panel-body {
+    padding: var(--pad);
+}
+
+.panel-body-tight {
+    padding: 12px;
+}
+
+.panel-body-flush {
+    padding: 0;
+}
+
+/* ---------- Buttons (Bootstrap overrides) ---------- */
+.btn {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    line-height: 1.2;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.btn-primary {
+    --bs-btn-color: #fff;
+    --bs-btn-bg: var(--ink);
+    --bs-btn-border-color: var(--ink);
+    --bs-btn-border-radius: 2px;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: var(--ink-soft);
+    --bs-btn-hover-border-color: var(--ink-soft);
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: #000;
+    --bs-btn-active-border-color: #000;
+    --bs-btn-focus-shadow-rgb: 16, 185, 129;
+    padding: 10px 22px;
+}
+
+.btn-outline-primary {
+    --bs-btn-color: var(--ink);
+    --bs-btn-border-color: var(--line-strong);
+    --bs-btn-border-radius: 2px;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: var(--ink);
+    --bs-btn-hover-border-color: var(--ink);
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: var(--ink);
+    --bs-btn-active-border-color: var(--ink);
+    --bs-btn-focus-shadow-rgb: 16, 185, 129;
+    background: var(--panel);
+}
+
+.btn-outline-primary.btn-sm {
+    width: 36px;
+    height: 36px;
+    padding: 0;
+    font-size: 14px;
+}
+
+/* =========================================================
+   NAVBAR
+   ========================================================= */
+.site-header {
+    padding-top: 24px;
+}
+
+.site-nav {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px 20px;
+    padding: 12px 18px;
+    background: var(--panel);
+    border: 1px solid var(--line);
+    box-shadow: 0 1px 0 rgba(15, 15, 15, 0.03);
+}
+
+.site-brand {
+    display: inline-flex;
+    flex-shrink: 0;
+    padding: 3px;
+    border: 1px solid var(--line);
+    background: #fff;
+}
+
+.site-brand img {
+    display: block;
+    width: 36px;
+    height: 36px;
+    object-fit: cover;
+}
+
+.site-links {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin: 0 auto 0 8px;
+    padding: 0;
+    list-style: none;
+}
+
+.site-links a {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 14px;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--muted);
+    text-decoration: none;
+    white-space: nowrap;
+    transition: color 0.15s ease;
+}
+
+.site-links a:hover {
+    color: var(--ink);
+}
+
+.site-links a.active {
+    color: var(--ink);
+}
+
+.site-links a.active::before {
+    content: "";
+    width: 6px;
+    height: 6px;
+    background: var(--accent);
+}
+
+.site-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+}
+
+.icon-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    font-size: 17px;
+    color: var(--ink);
+    text-decoration: none;
+    background: var(--panel);
+    border: 1px solid var(--line);
+    transition: background 0.15s ease, border-color 0.15s ease;
+}
+
+.icon-btn:hover {
+    background: var(--panel-alt);
+    border-color: var(--line-strong);
+    color: var(--ink);
+}
+
+/* =========================================================
+   SEARCH
+   ========================================================= */
+.search-panel {
+    padding: 14px var(--pad);
+}
+
+.search-form {
+    display: flex;
+    gap: 8px;
+    max-width: 640px;
+    margin: 0 auto;
+}
+
+.search-input {
+    flex: 1 1 auto;
+    min-width: 0;
+    height: 44px;
+    padding: 0 14px;
+    font-family: var(--font-mono);
+    font-size: 13px;
+    color: var(--ink);
+    background: #fff;
+    border: 1px solid var(--line-strong);
+    border-radius: 2px;
+}
+
+.search-input::placeholder {
+    color: var(--muted);
+}
+
+.search-input:focus {
+    background: #fff;
+    color: var(--ink);
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px var(--accent-soft);
+}
+
+.search-form .btn {
+    flex-shrink: 0;
+    height: 44px;
+    padding: 0 22px;
+    font-size: 15px;
+}
+
+/* =========================================================
+   MAIN CAROUSEL
+   ========================================================= */
+.carousel-img {
+    width: 100%;
+    height: clamp(200px, 30vw, 380px);
+    object-fit: cover;
+    object-position: center;
+}
+
+/* =========================================================
+   DOCTORS
+   ========================================================= */
+.doctor-card {
+    padding: 8px;
+    background: #fff;
+    border: 1px solid var(--line);
+}
+
+.doctor-img {
+    display: block;
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+/* =========================================================
+   PHARMACY BANNER
+   ========================================================= */
+.pharmacy-banner {
+    display: flex;
+    align-items: stretch;
+    min-height: 260px;
+    background: var(--panel-alt);
+    overflow: hidden;
+}
+
+.banner-image {
+    position: relative;
+    flex: 0 0 42%;
+    max-width: 42%;
+    border-right: 1px solid var(--line);
+}
+
+.banner-image img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.banner-content {
+    flex: 1 1 auto;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 28px 40px;
+}
+
+.banner-tag {
+    align-self: flex-start;
+    margin: 0 0 14px;
+    padding: 5px 10px;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    color: var(--accent-ink);
+    background: var(--accent-soft);
+    border: 1px solid var(--accent);
+}
+
+.banner-content h2 {
+    margin: 0 0 8px;
+    font-size: clamp(24px, 3.2vw, 38px);
+    font-weight: 600;
+    line-height: 1.1;
+    letter-spacing: -0.035em;
+    color: var(--ink);
+}
+
+.banner-content h3 {
+    margin: 0 0 14px;
+    font-size: clamp(16px, 2vw, 22px);
+    font-weight: 500;
+    letter-spacing: -0.02em;
+    color: var(--accent-ink);
+}
+
+.banner-text {
+    margin: 0;
+    color: var(--muted);
+}
+
+/* =========================================================
+   CATEGORIES  (shared-border cell grid)
+   ========================================================= */
+.category-list {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
+.category-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 14px;
+    padding: 26px 12px 22px;
+    color: var(--ink);
+    text-decoration: none;
+    text-align: center;
+    font-family: var(--font-mono);
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    border-right: 1px solid var(--line);
+    transition: background 0.2s ease;
+}
+
+.category-item:last-child {
+    border-right: 0;
+}
+
+.category-item:hover {
+    background: var(--panel-alt);
+    color: var(--ink);
+}
+
+.category-circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    background: var(--panel-alt);
+    border: 1px solid var(--line-strong);
+}
+
+.category-circle img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.category-item:hover .category-circle img {
+    transform: scale(1.08);
+}
+
+/* =========================================================
+   PRODUCT CARDS
+   ========================================================= */
+.pharmacy-product {
+    --bs-card-border-radius: 0;
+    --bs-card-inner-border-radius: 0;
+    --bs-card-border-color: var(--line);
+    --bs-card-bg: #fff;
+    overflow: hidden;
+    border-radius: 0;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.pharmacy-product:hover {
+    border-color: var(--ink);
+    box-shadow: 4px 4px 0 rgba(15, 15, 15, 0.07);
+}
+
+.product-image {
+    position: relative;
+    height: 190px;
+    padding: 14px;
+    overflow: hidden;
+    background-color: var(--panel-alt);
+    background-image: radial-gradient(rgba(15, 15, 15, 0.09) 1px, transparent 1px);
+    background-size: 14px 14px;
+    border-bottom: 1px solid var(--line);
+}
+
+.product-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Offer badge, top-right */
+.offer-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 4px 7px;
+    font-family: var(--font-mono);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    white-space: nowrap;
+    color: var(--accent-ink);
+    background: var(--accent-soft);
+    border: 1px solid var(--accent);
+}
+
+.pharmacy-product .card-body {
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+}
+
+.pharmacy-product .card-title {
+    margin: 0 0 4px;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    color: var(--ink);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.product-capacity {
+    margin: 0 0 14px;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.04em;
+    color: var(--muted);
+}
+
+.product-pricing {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.mrp {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: var(--muted);
+    text-decoration: line-through;
+}
+
+.discount {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--danger);
+}
+
+.selling-price {
+    margin: auto 0 0;
+    padding-top: 10px;
+    font-size: 21px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: var(--ink);
+}
+
+/* =========================================================
+   CATEGORY: 4-column variant + age label
+   ========================================================= */
+.category-list-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.category-label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+}
+
+.category-age {
+    font-size: 11px;
+    font-weight: 400;
+    letter-spacing: 0.04em;
+    text-transform: none;
+    color: var(--muted);
+}
+
+/* =========================================================
+   CERTIFICATES
+   ========================================================= */
+.certificate-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    margin: 0;
+    background: #fff;
+    border: 1px solid var(--line);
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.certificate-card:hover {
+    border-color: var(--ink);
+    box-shadow: 4px 4px 0 rgba(15, 15, 15, 0.07);
+}
+
+.certificate-frame {
+    padding: 14px;
+    background-color: var(--panel-alt);
+    background-image: radial-gradient(rgba(15, 15, 15, 0.09) 1px, transparent 1px);
+    background-size: 14px 14px;
+    border-bottom: 1px solid var(--line);
+}
+
+.certificate-frame img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    object-fit: contain;
+    background: #fff;
+    border: 1px solid var(--line);
+}
+
+.certificate-caption {
+    padding: 12px 14px;
+    font-family: var(--font-mono);
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--ink);
+}
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+.page-main {
+    padding-bottom: 0;
+}
+
+.site-footer {
+    padding-bottom: 40px;
+}
+
+.footer-panel {
+    margin-bottom: 0;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1.5fr;
+    gap: 32px;
+    padding: 32px var(--pad);
+}
+
+.footer-col {
+    min-width: 0;
+}
+
+.footer-about {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+}
+
+.footer-text {
+    margin: 0;
+    max-width: 280px;
+    color: var(--muted);
+}
+
+.footer-social {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.footer-title {
+    margin: 0 0 14px;
+    font-family: var(--font-mono);
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink);
+}
+
+.footer-links,
+.footer-contact,
+.footer-legal {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.footer-links a,
+.footer-legal a,
+.footer-contact a {
+    color: var(--muted);
+    text-decoration: none;
+    transition: color 0.15s ease;
+}
+
+.footer-links a:hover,
+.footer-legal a:hover,
+.footer-contact a:hover {
+    color: var(--ink);
+}
+
+.footer-links a {
+    display: inline-block;
+    padding: 4px 0;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.footer-contact li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 4px 0;
+    font-size: 14px;
+    color: var(--muted);
+    overflow-wrap: anywhere;
+}
+
+.footer-contact i {
+    flex-shrink: 0;
+    color: var(--accent-ink);
+    line-height: 1.5;
+}
+
+.footer-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px 20px;
+    padding: 14px var(--pad);
+    border-top: 1px solid var(--line);
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.04em;
+    color: var(--muted);
+}
+
+.footer-copy {
+    margin: 0;
+}
+
+.footer-legal {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px 20px;
+}
+
+/* =========================================================
+   HEADER LAYOUT (navbar + search live in one header block)
+   ========================================================= */
+.site-header .site-nav {
+    margin-bottom: var(--gap);
+}
+
+.site-header .search-panel {
+    margin-bottom: 0;
+}
+
+/* =========================================================
+   TAGLINE
+   ========================================================= */
+.tagline {
+    padding: 8px 0 calc(var(--gap) + 8px);
+    text-align: center;
+}
+
+.tagline-title {
+    margin: 0 0 10px;
+    font-size: clamp(24px, 3.2vw, 38px);
+    font-weight: 600;
+    line-height: 1.15;
+    letter-spacing: -0.035em;
+    color: var(--ink);
+}
+
+.tagline-sub {
+    margin: 0;
+    font-family: var(--font-mono);
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--accent-ink);
+}
+
+/* empty sub-head acts as a plain divider line between circles and products */
+.panel-head-sub:empty {
+    padding: 0;
+    border-bottom: 0;
+}
+
+@media (max-width: 767.98px) {
+    .tagline-sub {
+        font-size: 10px;
+        letter-spacing: 0.04em;
+        line-height: 1.6;
+    }
+}
+
+/* =========================================================
+   CATEGORY: 6-circle variant, active state
+   ========================================================= */
+.category-list-6 {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+}
+
+.category-item span {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.category-item.active {
+    background: var(--panel-alt);
+}
+
+.category-item.active .category-circle {
+    border-color: var(--accent);
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+}
+
+.category-item.active span::before {
+    content: "";
+    width: 6px;
+    height: 6px;
+    flex-shrink: 0;
+    background: var(--accent);
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+/* Tablet: navbar links drop to their own scrollable row */
+@media (max-width: 991.98px) {
+    .site-brand {
+        order: 1;
+    }
+
+    .site-actions {
+        order: 2;
+        margin-left: auto;
+    }
+
+    .site-links {
+        order: 3;
+        width: 100%;
+        margin: 0;
+        padding-top: 8px;
+        border-top: 1px solid var(--line);
+        overflow-x: auto;
+        scrollbar-width: none;
+    }
+
+    .site-links::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+@media (max-width: 767.98px) {
+    :root {
+        --gap: 16px;
+        --pad: 14px;
+    }
+
+    .container {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .site-header {
+        padding-top: 16px;
+    }
+
+    .panel-title {
+        padding: 8px 14px;
+    }
+
+    .doctor-img {
+        height: 180px;
+    }
+
+    .pharmacy-banner {
+        min-height: 190px;
+    }
+
+    .banner-image {
+        flex-basis: 38%;
+        max-width: 38%;
+    }
+
+    .banner-content {
+        padding: 16px;
+    }
+
+    .banner-tag {
+        font-size: 9px;
+        margin-bottom: 10px;
+    }
+
+    .category-list {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .category-item {
+        padding: 18px 8px 16px;
+        gap: 10px;
+        font-size: 10px;
+        letter-spacing: 0.03em;
+        border-bottom: 1px solid var(--line);
+    }
+
+    /* tidy shared borders for the 3-column layout */
+    .category-item:nth-child(3n) {
+        border-right: 0;
+    }
+
+    .category-item:nth-child(n + 4) {
+        border-bottom: 0;
+    }
+
+    .category-circle {
+        width: 72px;
+        height: 72px;
+    }
+
+    .product-image {
+        height: 150px;
+        padding: 10px;
+    }
+
+    .pharmacy-product .card-body {
+        padding: 12px;
+    }
+
+    .pharmacy-product .card-title {
+        font-size: 14px;
+    }
+
+    .selling-price {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 400px) {
+    .site-nav {
+        padding: 10px 12px;
+    }
+
+    .banner-image {
+        flex-basis: 34%;
+        max-width: 34%;
+    }
+
+    .banner-content {
+        padding: 12px;
+    }
+
+    .banner-content h2 {
+        font-size: 20px;
+    }
+
+    .banner-content h3 {
+        font-size: 13px;
+        margin-bottom: 8px;
+    }
+
+    .banner-text {
+        font-size: 12px;
+    }
+
+    .category-circle {
+        width: 58px;
+        height: 58px;
+    }
+
+    .product-image {
+        height: 128px;
+    }
+
+    .offer-badge {
+        font-size: 9px;
+        padding: 3px 5px;
+    }
+}
+
+/* =========================================================
+   RESPONSIVE ADDITIONS
+   (doctors x5, age/gender grid, certificates, footer)
+   ========================================================= */
+
+/* Small desktop: 5 doctor cards get narrow, so shorten them a little */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .doctor-img {
+        height: 190px;
+    }
+}
+
+/* Tablet and below: footer collapses to 2 columns */
+@media (max-width: 991.98px) {
+    .footer-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .footer-about,
+    .footer-contact-col {
+        grid-column: 1 / -1;
+    }
+}
+
+/* Mobile */
+@media (max-width: 767.98px) {
+    /* 4 circles -> 2 x 2 with tidy shared borders */
+    .category-list-4 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .category-list-4 .category-item:nth-child(3n) {
+        border-right: 1px solid var(--line);
+    }
+
+    .category-list-4 .category-item:nth-child(2n) {
+        border-right: 0;
+    }
+
+    .category-list-4 .category-item:nth-child(-n + 2) {
+        border-bottom: 1px solid var(--line);
+    }
+
+    .category-list-4 .category-item:nth-child(n + 3) {
+        border-bottom: 0;
+    }
+
+    .category-age {
+        font-size: 10px;
+    }
+
+    .certificate-frame {
+        padding: 10px;
+    }
+
+    .certificate-caption {
+        padding: 10px 8px;
+        font-size: 10px;
+        letter-spacing: 0.04em;
+    }
+
+    .footer-grid {
+        gap: 24px;
+        padding: 24px var(--pad);
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .site-footer {
+        padding-bottom: 24px;
+    }
+}
+
+/* Phones: 2 doctor cards per row, shorter images */
+@media (max-width: 575.98px) {
+    .doctor-img {
+        height: 150px;
+    }
+}
+
+@media (max-width: 400px) {
+    .doctor-img {
+        height: 130px;
+    }
+
+    .certificate-frame {
+        padding: 8px;
+    }
+}

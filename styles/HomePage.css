@@ -799,6 +799,11 @@ img {
     gap: 4px 20px;
 }
 
+/* divider line above a body block that follows another block in the same panel */
+.panel-body-divided {
+    border-top: 1px solid var(--line);
+}
+
 /* =========================================================
    RESPONSIVE
    ========================================================= */

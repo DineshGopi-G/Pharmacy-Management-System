@@ -1,0 +1,144 @@
+/* =========================================================
+   CategoryPage.css
+   Extras for the Category page. Load AFTER HomePage.css
+   (that file holds tokens, panels, navbar, cards, footer).
+   ========================================================= */
+
+/* ---------- Header: navbar + search live in one block ---------- */
+.site-header .site-nav {
+    margin-bottom: var(--gap);
+}
+
+.site-header .search-panel {
+    margin-bottom: 0;
+}
+
+/* ---------- Breadcrumb ---------- */
+.crumbs {
+    margin-bottom: 16px;
+}
+
+.crumb-list {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 6px 10px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--ink);
+}
+
+.crumb-list li + li::before {
+    content: "/";
+    margin-right: 10px;
+    color: var(--line-strong);
+}
+
+.crumb-list a {
+    color: var(--muted);
+    text-decoration: none;
+    transition: color 0.15s ease;
+}
+
+.crumb-list a:hover {
+    color: var(--ink);
+}
+
+/* ---------- Active category circle ---------- */
+.category-item.active {
+    background: var(--panel-alt);
+}
+
+.category-item.active .category-circle {
+    border-color: var(--accent);
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+}
+
+.category-item.active span {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.category-item.active span::before {
+    content: "";
+    width: 6px;
+    height: 6px;
+    flex-shrink: 0;
+    background: var(--accent);
+}
+
+/* ---------- Category carousel: 6 circles per slide ---------- */
+.category-list-6 {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+}
+
+/* ---------- Sort + result count ---------- */
+.sort-box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.sort-label {
+    margin: 0;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--muted);
+    white-space: nowrap;
+}
+
+.sort-select {
+    min-width: 200px;
+    height: 40px;
+    padding: 0 36px 0 12px;
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--ink);
+    background-color: #fff;
+    border: 1px solid var(--line-strong);
+    border-radius: 2px;
+}
+
+.sort-select:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px var(--accent-soft);
+}
+
+.result-count {
+    margin: 0 0 16px;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.04em;
+    color: var(--muted);
+}
+
+.result-count strong {
+    font-weight: 700;
+    color: var(--ink);
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 767.98px) {
+    .crumbs {
+        margin-bottom: 12px;
+    }
+
+    .sort-box {
+        width: 100%;
+    }
+
+    .sort-select {
+        flex: 1 1 auto;
+        min-width: 0;
+    }
+}

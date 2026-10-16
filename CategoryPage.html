@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Category - Medicines</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- Shared theme (same file as the home page) -->
+    <link rel="stylesheet" href="./styles/HomePage.css">
+
+    <!-- Category page extras (load after the shared theme) -->
+    <link rel="stylesheet" href="./styles/CategoryPage.css">
+</head>
+
+<body>
+
+    <!-- =====================================================
+         HEADER  (navbar + search bar)
+         ===================================================== -->
+    <header class="site-header">
+        <div class="container">
+
+            <nav class="site-nav bracket" aria-label="Main navigation">
+
+                <!-- Logo -->
+                <a class="site-brand" href="#" aria-label="Home">
+                    <img src="./media/shoe.jpg" alt="Logo" width="36" height="36">
+                </a>
+
+                <!-- Navigation Links -->
+                <ul class="site-links">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Pharmacy</a></li>
+                    <li><a class="active" href="#" aria-current="page">Category</a></li>
+                    <li><a href="#">Brand</a></li>
+                </ul>
+
+                <!-- Right-side Icons -->
+                <div class="site-actions">
+                    <a href="#" class="icon-btn" aria-label="Bookmarks">
+                        <i class="bi bi-bookmark"></i>
+                    </a>
+
+                    <a href="#" class="icon-btn" aria-label="Cart">
+                        <i class="bi bi-cart3"></i>
+                    </a>
+
+                    <a href="#" class="btn btn-primary">Login</a>
+                </div>
+
+            </nav>
+
+            <!-- Search Bar -->
+            <section class="panel bracket search-panel" aria-label="Search">
+                <form class="search-form" role="search">
+                    <input class="form-control search-input" type="search"
+                        placeholder="Search medicines, categories..." aria-label="Search medicines">
+
+                    <button class="btn btn-primary" type="submit" aria-label="Search">
+                        <i class="bi bi-search"></i>
+                    </button>
+                </form>
+            </section>
+
+        </div>
+    </header>
+
+    <!-- =====================================================
+         MAIN CONTENT
+         ===================================================== -->
+    <main class="container page-main">
+
+        <h1 class="visually-hidden">Medicines</h1>
+
+        <!-- Breadcrumb -->
+        <nav class="crumbs" aria-label="Breadcrumb">
+            <ol class="crumb-list">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Category</a></li>
+                <li aria-current="page">Medicines</li>
+            </ol>
+        </nav>
+
+        <!-- Browse categories (carousel) -->
+        <section class="panel bracket" aria-label="Browse categories">
+            <div class="panel-head">
+                <h2 class="panel-title">Browse Categories</h2>
+
+                <div class="panel-actions">
+                    <button class="btn btn-outline-primary btn-sm" type="button"
+                        data-bs-target="#carouselCategories" data-bs-slide="prev" aria-label="Previous categories">
+                        <i class="bi bi-chevron-left"></i>
+                    </button>
+
+                    <button class="btn btn-outline-primary btn-sm" type="button"
+                        data-bs-target="#carouselCategories" data-bs-slide="next" aria-label="Next categories">
+                        <i class="bi bi-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="panel-body panel-body-flush">
+                <div id="carouselCategories" class="carousel slide">
+                    <div class="carousel-inner">
+
+                        <div class="carousel-item active">
+                            <div class="category-list category-list-6">
+
+                                <a href="#" class="category-item active" aria-current="page">
+                                    <div class="category-circle">
+                                        <img src="./media/medicines.jpg" alt="Medicines">
+                                    </div>
+                                    <span>Medicines</span>
+                                </a>
+
+                                <a href="#" class="category-item">
+                                    <div class="category-circle">
+                                        <img src="./media/vitamins.jpg" alt="Vitamins">
+                                    </div>
+                                    <span>Vitamins</span>
+                                </a>
+
+                                <a href="#" class="category-item">
+                                    <div class="category-circle">
+                                        <img src="./media/skincare.jpg" alt="Skincare">
+                                    </div>
+                                    <span>Skincare</span>
+                                </a>
+
+                                <a href="#" class="category-item">
+                                    <div class="category-circle">
+                                        <img src="./media/first-aid.jpg" alt="First Aid">
+                                    </div>
+                                    <span>First Aid</span>
+                                </a>
+
+                                <a href="#" class="category-item">
+                                    <div class="category-circle">
+                                        <img src="./media/personal-care.jpg" alt="Personal Care">
+                                    </div>
+                                    <span>Personal Care</span>
+                                </a>
+
+                                <a href="#" class="category-item">
+                                    <div class="category-circle">
+                                        <img src="./media/medicines.jpg" alt="Baby Care">
+                                    </div>
+                                    <span>Baby Care</span>
+                                </a>
+
+                            </div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <div class="category-list category-list-6">
+
+                                <a href="#" class="category-item">
+                                    <div class="category-circle">
+                                        <img src="./media/vitamins.jpg" alt="Diabetes Care">
+                                    </div>
+                                    <span>Diabetes Care</span>
+                                </a>
+
+                                <a href="#" class="category-item">
+                                    <div class="category-circle">
+                                        <img src="./media/skincare.jpg" alt="Heart Care">
+                                    </div>
+                                    <span>Heart Care</span>
+                                </a>
+
+                                <a href="#" class="category-item">
+                                    <div class="category-circle">
+                                        <img src="./media/first-aid.jpg" alt="Ayurveda">
+                                    </div>
+                                    <span>Ayurveda</span>
+                                </a>
+
+                                <a href="#" class="category-item">
+                                    <div class="category-circle">
+                                        <img src="./media/personal-care.jpg" alt="Health Devices">
+                                    </div>
+                                    <span>Health Devices</span>
+                                </a>
+
+                                <a href="#" class="category-item">
+                                    <div class="category-circle">
+                                        <img src="./media/medicines.jpg" alt="Women&#39;s Health">
+                                    </div>
+                                    <span>Women&#39;s Health</span>
+                                </a>
+
+                                <a href="#" class="category-item">
+                                    <div class="category-circle">
+                                        <img src="./media/vitamins.jpg" alt="Men&#39;s Health">
+                                    </div>
+                                    <span>Men&#39;s Health</span>
+                                </a>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Products -->
+        <section class="panel bracket" aria-label="Medicines products">
+            <div class="panel-head">
+                <h2 class="panel-title">Medicines</h2>
+
+                <div class="sort-box">
+                    <label class="sort-label" for="sort">Sort by</label>
+                    <select class="form-select sort-select" id="sort" name="sort">
+                        <option value="popular" selected>Popularity</option>
+                        <option value="price-asc">Price: Low to High</option>
+                        <option value="price-desc">Price: High to Low</option>
+                        <option value="discount">Discount</option>
+                        <option value="new">Newest</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="panel-body">
+                <p class="result-count">Showing <strong>8</strong> products</p>
+
+                <div class="row g-3">
+
+                    <!-- Product 1 -->
+                    <div class="col-6 col-lg-3">
+                        <article class="card pharmacy-product h-100">
+
+                            <div class="product-image">
+                                <img src="./media/vitamin-c.jpg" alt="Paracetamol 500 mg">
+                                <span class="offer-badge">BUY 3, +2% OFF</span>
+                            </div>
+
+                            <div class="card-body">
+                                <h3 class="card-title">Paracetamol 500 mg</h3>
+                                <p class="product-capacity">15 Tablets</p>
+
+                                <div class="product-pricing">
+                                    <span class="mrp">MRP ₹40</span>
+                                    <span class="discount">50% OFF</span>
+                                </div>
+
+                                <p class="selling-price">₹20</p>
+                            </div>
+
+                        </article>
+                    </div>
+
+                    <!-- Product 2 -->
+                    <div class="col-6 col-lg-3">
+                        <article class="card pharmacy-product h-100">
+
+                            <div class="product-image">
+                                <img src="./media/skincare-product.jpg" alt="Ibuprofen 400 mg">
+                                <span class="offer-badge">BUY 3, +2% OFF</span>
+                            </div>
+
+                            <div class="card-body">
+                                <h3 class="card-title">Ibuprofen 400 mg</h3>
+                                <p class="product-capacity">10 Tablets</p>
+
+                                <div class="product-pricing">
+                                    <span class="mrp">MRP ₹60</span>
+                                    <span class="discount">42% OFF</span>
+                                </div>
+
+                                <p class="selling-price">₹35</p>
+                            </div>
+
+                        </article>
+                    </div>
+
+                    <!-- Product 3 -->
+                    <div class="col-6 col-lg-3">
+                        <article class="card pharmacy-product h-100">
+
+                            <div class="product-image">
+                                <img src="./media/first-aid-kit.jpg" alt="Diclofenac Gel">
+                                <span class="offer-badge">BUY 3, +2% OFF</span>
+                            </div>
+
+                            <div class="card-body">
+                                <h3 class="card-title">Diclofenac Gel</h3>
+                                <p class="product-capacity">30 g</p>
+
+                                <div class="product-pricing">
+                                    <span class="mrp">MRP ₹120</span>
+                                    <span class="discount">29% OFF</span>
+                                </div>
+
+                                <p class="selling-price">₹85</p>
+                            </div>
+
+                        </article>
+                    </div>
+
+                    <!-- Product 4 -->
+                    <div class="col-6 col-lg-3">
+                        <article class="card pharmacy-product h-100">
+
+                            <div class="product-image">
+                                <img src="./media/personal-care-product.jpg" alt="Cold &amp; Flu Tablets">
+                                <span class="offer-badge">BUY 3, +2% OFF</span>
+                            </div>
+
+                            <div class="card-body">
+                                <h3 class="card-title">Cold &amp; Flu Tablets</h3>
+                                <p class="product-capacity">10 Tablets</p>
+
+                                <div class="product-pricing">
+                                    <span class="mrp">MRP ₹70</span>
+                                    <span class="discount">29% OFF</span>
+                                </div>
+
+                                <p class="selling-price">₹50</p>
+                            </div>
+
+                        </article>
+                    </div>
+
+                    <!-- Product 5 -->
+                    <div class="col-6 col-lg-3">
+                        <article class="card pharmacy-product h-100">
+
+                            <div class="product-image">
+                                <img src="./media/vitamin-c.jpg" alt="Cough Syrup">
+                                <span class="offer-badge">BUY 3, +2% OFF</span>
+                            </div>
+
+                            <div class="card-body">
+                                <h3 class="card-title">Cough Syrup</h3>
+                                <p class="product-capacity">100 ml</p>
+
+                                <div class="product-pricing">
+                                    <span class="mrp">MRP ₹110</span>
+                                    <span class="discount">18% OFF</span>
+                                </div>
+
+                                <p class="selling-price">₹90</p>
+                            </div>
+
+                        </article>
+                    </div>
+
+                    <!-- Product 6 -->
+                    <div class="col-6 col-lg-3">
+                        <article class="card pharmacy-product h-100">
+
+                            <div class="product-image">
+                                <img src="./media/skincare-product.jpg" alt="Antacid Gel">
+                                <span class="offer-badge">BUY 3, +2% OFF</span>
+                            </div>
+
+                            <div class="card-body">
+                                <h3 class="card-title">Antacid Gel</h3>
+                                <p class="product-capacity">170 ml</p>
+
+                                <div class="product-pricing">
+                                    <span class="mrp">MRP ₹140</span>
+                                    <span class="discount">14% OFF</span>
+                                </div>
+
+                                <p class="selling-price">₹120</p>
+                            </div>
+
+                        </article>
+                    </div>
+
+                    <!-- Product 7 -->
+                    <div class="col-6 col-lg-3">
+                        <article class="card pharmacy-product h-100">
+
+                            <div class="product-image">
+                                <img src="./media/first-aid-kit.jpg" alt="Cetirizine 10 mg">
+                                <span class="offer-badge">BUY 3, +2% OFF</span>
+                            </div>
+
+                            <div class="card-body">
+                                <h3 class="card-title">Cetirizine 10 mg</h3>
+                                <p class="product-capacity">10 Tablets</p>
+
+                                <div class="product-pricing">
+                                    <span class="mrp">MRP ₹35</span>
+                                    <span class="discount">14% OFF</span>
+                                </div>
+
+                                <p class="selling-price">₹30</p>
+                            </div>
+
+                        </article>
+                    </div>
+
+                    <!-- Product 8 -->
+                    <div class="col-6 col-lg-3">
+                        <article class="card pharmacy-product h-100">
+
+                            <div class="product-image">
+                                <img src="./media/personal-care-product.jpg" alt="Headache Balm">
+                                <span class="offer-badge">BUY 3, +2% OFF</span>
+                            </div>
+
+                            <div class="card-body">
+                                <h3 class="card-title">Headache Balm</h3>
+                                <p class="product-capacity">10 g</p>
+
+                                <div class="product-pricing">
+                                    <span class="mrp">MRP ₹60</span>
+                                    <span class="discount">50% OFF</span>
+                                </div>
+
+                                <p class="selling-price">₹30</p>
+                            </div>
+
+                        </article>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="panel bracket footer-panel">
+
+                <div class="footer-grid">
+
+                    <div class="footer-col footer-about">
+                        <a class="site-brand" href="#" aria-label="Home">
+                            <img src="./media/shoe.jpg" alt="Logo" width="36" height="36">
+                        </a>
+                        <p class="footer-text">Everyday healthcare essentials, all in one place.</p>
+                        <div class="footer-social">
+                            <a href="#" class="icon-btn" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                            <a href="#" class="icon-btn" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                            <a href="#" class="icon-btn" aria-label="X"><i class="bi bi-twitter-x"></i></a>
+                            <a href="#" class="icon-btn" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+                        </div>
+                    </div>
+
+                    <nav class="footer-col" aria-label="Quick links">
+                        <h2 class="footer-title">Quick Links</h2>
+                        <ul class="footer-links">
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Pharmacy</a></li>
+                            <li><a href="#">Category</a></li>
+                            <li><a href="#">Brand</a></li>
+                        </ul>
+                    </nav>
+
+                    <nav class="footer-col" aria-label="Shop categories">
+                        <h2 class="footer-title">Categories</h2>
+                        <ul class="footer-links">
+                            <li><a href="#">Medicines</a></li>
+                            <li><a href="#">Vitamins</a></li>
+                            <li><a href="#">Skincare</a></li>
+                            <li><a href="#">First Aid</a></li>
+                            <li><a href="#">Personal Care</a></li>
+                        </ul>
+                    </nav>
+
+                    <div class="footer-col footer-contact-col">
+                        <h2 class="footer-title">Contact</h2>
+                        <ul class="footer-contact">
+                            <li><i class="bi bi-geo-alt"></i><span>Your address, City, State, India</span></li>
+                            <li><i class="bi bi-telephone"></i><a href="tel:+910000000000">+91 00000 00000</a></li>
+                            <li><i class="bi bi-envelope"></i><a href="mailto:support@yourpharmacy.com">support@yourpharmacy.com</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+
+                <div class="footer-bottom">
+                    <p class="footer-copy">&copy; 2026 Pharmacy. All rights reserved.</p>
+                    <ul class="footer-legal">
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Use</a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

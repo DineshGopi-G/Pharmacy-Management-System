@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saved Items - Pharmacy</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- Shared theme (same file as the home page) -->
+    <link rel="stylesheet" href="./styles/HomePage.css">
+
+    <!-- Bookmark page extras (load after the shared theme) -->
+    <link rel="stylesheet" href="./styles/BookmarkPage.css">
+</head>
+
+<body>
+
+    <!-- =====================================================
+         HEADER  (navbar + search bar)
+         ===================================================== -->
+    <header class="site-header">
+        <div class="container">
+
+            <nav class="site-nav bracket" aria-label="Main navigation">
+
+                <!-- Logo -->
+                <a class="site-brand" href="#" aria-label="Home">
+                    <img src="./media/shoe.jpg" alt="Logo" width="36" height="36">
+                </a>
+
+                <!-- Navigation Links -->
+                <ul class="site-links">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Pharmacy</a></li>
+                    <li><a href="#">Category</a></li>
+                    <li><a href="#">Brand</a></li>
+                </ul>
+
+                <!-- Right-side Icons -->
+                <div class="site-actions">
+                    <a href="#" class="icon-btn active" aria-label="Bookmarks" aria-current="page">
+                        <i class="bi bi-bookmark-fill"></i>
+                    </a>
+
+                    <a href="#" class="icon-btn" aria-label="Cart">
+                        <i class="bi bi-cart3"></i>
+                    </a>
+
+                    <a href="#" class="btn btn-primary">Login</a>
+                </div>
+
+            </nav>
+
+            <!-- Search Bar -->
+            <section class="panel bracket search-panel" aria-label="Search">
+                <form class="search-form" role="search">
+                    <input class="form-control search-input" type="search"
+                        placeholder="Search medicines, categories..." aria-label="Search medicines">
+
+                    <button class="btn btn-primary" type="submit" aria-label="Search">
+                        <i class="bi bi-search"></i>
+                    </button>
+                </form>
+            </section>
+
+        </div>
+    </header>
+
+    <!-- =====================================================
+         MAIN CONTENT
+         ===================================================== -->
+    <main class="container page-main">
+
+        <h1 class="visually-hidden">Saved Items</h1>
+
+        <!-- Breadcrumb -->
+        <nav class="crumbs" aria-label="Breadcrumb">
+            <ol class="crumb-list">
+                <li><a href="#">Home</a></li>
+                <li aria-current="page">Saved Items</li>
+            </ol>
+        </nav>
+
+        <section class="panel bracket" aria-label="Saved items">
+            <div class="panel-head">
+                <h2 class="panel-title">Saved Items</h2>
+
+                <div class="panel-actions saved-actions">
+                    <p class="saved-count" id="savedCount">8 items</p>
+                    <button class="btn btn-outline-primary clear-btn" type="button" id="clearAll">
+                        <i class="bi bi-trash3"></i>Clear All
+                    </button>
+                </div>
+            </div>
+
+            <!-- Saved products -->
+            <div class="panel-body" id="savedBody">
+                <div class="row g-3" id="savedGrid">
+
+                    <!-- Product 1 -->
+                    <div class="col-6 col-lg-3 saved-col">
+                        <article class="card pharmacy-product h-100">
+
+                            <div class="product-image">
+                                <img src="./media/vitamin-c.jpg" alt="Paracetamol 500 mg">
+                                <span class="offer-badge">BUY 3, +2% OFF</span>
+                                <button class="bookmark-btn" type="button" data-action="unsave"
+                                    aria-label="Remove Paracetamol 500 mg from saved items">
+                                    <i class="bi bi-bookmark-fill"></i>
+                                </button>
+                            </div>
+
+                            <div class="card-body">
+                                <h3 class="card-title">Paracetamol 500 mg</h3>
+                                <p class="product-capacity">15 Tablets</p>
+
+                                <div class="product-pricing">
+                                    <span class="mrp">MRP ₹40</span>
+                                    <span class="discount">50% OFF</span>
+                                </div>
+
+                                <p class="selling-price">₹20</p>
+
+                                <div class="product-actions">
+                                    <button class="btn btn-primary cart-add" type="button" data-action="add">
+                                        <i class="bi bi-cart-plus"></i><span>Add to Cart</span>
+                                    </button>
+                                </div>
+                            </div>
+
+                        </article>
+                    </div>
+
+                    <!-- Product 2 -->
+                    <div class="col-6 col-lg-3 saved-col">
+                        <article class="card pharmacy-product h-100">
+
+                            <div class="product-image">
+                                <img src="./media/skincare-product.jpg" alt="Ibuprofen 400 mg">
+                                <span class="offer-badge">BUY 3, +2% OFF</span>
+                                <button class="bookmark-btn" type="button" data-action="unsave"
+                                    aria-label="Remove Ibuprofen 400 mg from saved items">
+                                    <i class="bi bi-bookmark-fill"></i>
+                                </button>
+                            </div>
+
+                            <div class="card-body">
+                                <h3 class="card-title">Ibuprofen 400 mg</h3>
+                                <p class="product-capacity">10 Tablets</p>
+
+                                <div class="product-pricing">
+                                    <span class="mrp">MRP ₹60</span>
+                                    <span class="discount">42% OFF</span>
+                                </div>
+
+                                <p class="selling-price">₹35</p>
+
+                                <div class="product-actions">
+                                    <button class="btn btn-primary cart-add" type="button" data-action="add">
+                                        <i class="bi bi-cart-plus"></i><span>Add to Cart</span>
+                                    </button>
+                                </div>
+                            </div>
+
+                        </article>
+                    </div>
+
+                    <!-- Product 3 -->
+                    <div class="col-6 col-lg-3 saved-col">
+                        <article class="card pharmacy-product h-100">
+
+                            <div class="product-image">
+                                <img src="./media/first-aid-kit.jpg" alt="Diclofenac Gel">
+                                <span class="offer-badge">BUY 3, +2% OFF</span>
+                                <button class="bookmark-btn" type="button" data-action="unsave"
+                                    aria-label="Remove Diclofenac Gel from saved items">
+                                    <i class="bi bi-bookmark-fill"></i>
+                                </button>
+                            </div>
+
+                            <div class="card-body">
+                                <h3 class="card-title">Diclofenac Gel</h3>
+                                <p class="product-capacity">30 g</p>
+
+                                <div class="product-pricing">
+                                    <span class="mrp">MRP ₹120</span>
+                                    <span class="discount">29% OFF</span>
+                                </div>
+
+                                <p class="selling-price">₹85</p>
+
+                                <div class="product-actions">
+                                    <button class="btn btn-primary cart-add" type="button" data-action="add">
+                                        <i class="bi bi-cart-plus"></i><span>Add to Cart</span>
+                                    </button>
+                                </div>
+                            </div>
+
+                        </article>
+                    </div>
+
+                    <!-- Product 4 -->
+                    <div class="col-6 col-lg-3 saved-col">
+                        <article class="card pharmacy-product h-100">
+
+                            <div class="product-image">
+                                <img src="./media/personal-care-product.jpg" alt="Cold &amp; Flu Tablets">
+                                <span class="offer-badge">BUY 3, +2% OFF</span>
+                                <button class="bookmark-btn" type="button" data-action="unsave"
+                                    aria-label="Remove Cold &amp; Flu Tablets from saved items">
+                                    <i class="bi bi-bookmark-fill"></i>
+                                </button>
+                            </div>
+
+                            <div class="card-body">
+                                <h3 class="card-title">Cold &amp; Flu Tablets</h3>
+                                <p class="product-capacity">10 Tablets</p>
+
+                                <div class="product-pricing">
+                                    <span class="mrp">MRP ₹70</span>
+                                    <span class="discount">29% OFF</span>
+                                </div>
+
+                                <p class="selling-price">₹50</p>
+
+                                <div class="product-actions">
+                                    <button class="btn btn-primary cart-add" type="button" data-action="add">
+                                        <i class="bi bi-cart-plus"></i><span>Add to Cart</span>
+                                    </button>
+                                </div>
+                            </div>
+
+                        </article>
+                    </div>
+
+                    <!-- Product 5 -->
+                    <div class="col-6 col-lg-3 saved-col">
+                        <article class="card pharmacy-product h-100">
+
+                            <div class="product-image">
+                                <img src="./media/vitamin-c.jpg" alt="Cough Syrup">
+                                <span class="offer-badge">BUY 3, +2% OFF</span>
+                                <button class="bookmark-btn" type="button" data-action="unsave"
+                                    aria-label="Remove Cough Syrup from saved items">
+                                    <i class="bi bi-bookmark-fill"></i>
+                                </button>
+                            </div>
+
+                            <div class="card-body">
+                                <h3 class="card-title">Cough Syrup</h3>
+                                <p class="product-capacity">100 ml</p>
+
+                                <div class="product-pricing">
+                                    <span class="mrp">MRP ₹110</span>
+                                    <span class="discount">18% OFF</span>
+                                </div>
+
+                                <p class="selling-price">₹90</p>
+
+                                <div class="product-actions">
+                                    <button class="btn btn-primary cart-add" type="button" data-action="add">
+                                        <i class="bi bi-cart-plus"></i><span>Add to Cart</span>
+                                    </button>
+                                </div>
+                            </div>
+
+                        </article>
+                    </div>
+
+                    <!-- Product 6 -->
+                    <div class="col-6 col-lg-3 saved-col">
+                        <article class="card pharmacy-product h-100">
+
+                            <div class="product-image">
+                                <img src="./media/skincare-product.jpg" alt="Antacid Gel">
+                                <span class="offer-badge">BUY 3, +2% OFF</span>
+                                <button class="bookmark-btn" type="button" data-action="unsave"
+                                    aria-label="Remove Antacid Gel from saved items">
+                                    <i class="bi bi-bookmark-fill"></i>
+                                </button>
+                            </div>
+
+                            <div class="card-body">
+                                <h3 class="card-title">Antacid Gel</h3>
+                                <p class="product-capacity">170 ml</p>
+
+                                <div class="product-pricing">
+                                    <span class="mrp">MRP ₹140</span>
+                                    <span class="discount">14% OFF</span>
+                                </div>
+
+                                <p class="selling-price">₹120</p>
+
+                                <div class="product-actions">
+                                    <button class="btn btn-primary cart-add" type="button" data-action="add">
+                                        <i class="bi bi-cart-plus"></i><span>Add to Cart</span>
+                                    </button>
+                                </div>
+                            </div>
+
+                        </article>
+                    </div>
+
+                    <!-- Product 7 -->
+                    <div class="col-6 col-lg-3 saved-col">
+                        <article class="card pharmacy-product h-100">
+
+                            <div class="product-image">
+                                <img src="./media/first-aid-kit.jpg" alt="Cetirizine 10 mg">
+                                <span class="offer-badge">BUY 3, +2% OFF</span>
+                                <button class="bookmark-btn" type="button" data-action="unsave"
+                                    aria-label="Remove Cetirizine 10 mg from saved items">
+                                    <i class="bi bi-bookmark-fill"></i>
+                                </button>
+                            </div>
+
+                            <div class="card-body">
+                                <h3 class="card-title">Cetirizine 10 mg</h3>
+                                <p class="product-capacity">10 Tablets</p>
+
+                                <div class="product-pricing">
+                                    <span class="mrp">MRP ₹35</span>
+                                    <span class="discount">14% OFF</span>
+                                </div>
+
+                                <p class="selling-price">₹30</p>
+
+                                <div class="product-actions">
+                                    <button class="btn btn-primary cart-add" type="button" data-action="add">
+                                        <i class="bi bi-cart-plus"></i><span>Add to Cart</span>
+                                    </button>
+                                </div>
+                            </div>
+
+                        </article>
+                    </div>
+
+                    <!-- Product 8 -->
+                    <div class="col-6 col-lg-3 saved-col">
+                        <article class="card pharmacy-product h-100">
+
+                            <div class="product-image">
+                                <img src="./media/personal-care-product.jpg" alt="Headache Balm">
+                                <span class="offer-badge">BUY 3, +2% OFF</span>
+                                <button class="bookmark-btn" type="button" data-action="unsave"
+                                    aria-label="Remove Headache Balm from saved items">
+                                    <i class="bi bi-bookmark-fill"></i>
+                                </button>
+                            </div>
+
+                            <div class="card-body">
+                                <h3 class="card-title">Headache Balm</h3>
+                                <p class="product-capacity">10 g</p>
+
+                                <div class="product-pricing">
+                                    <span class="mrp">MRP ₹60</span>
+                                    <span class="discount">50% OFF</span>
+                                </div>
+
+                                <p class="selling-price">₹30</p>
+
+                                <div class="product-actions">
+                                    <button class="btn btn-primary cart-add" type="button" data-action="add">
+                                        <i class="bi bi-cart-plus"></i><span>Add to Cart</span>
+                                    </button>
+                                </div>
+                            </div>
+
+                        </article>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Empty state (shown when nothing is saved) -->
+            <div class="panel-body saved-empty" id="savedEmpty" hidden>
+                <i class="bi bi-bookmark saved-empty-icon"></i>
+                <p class="saved-empty-title">No saved items yet</p>
+                <p class="saved-empty-text">Tap the bookmark icon on any product to keep it here for later.</p>
+                <a href="#" class="btn btn-primary">Browse Medicines</a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="panel bracket footer-panel">
+
+                <div class="footer-grid">
+
+                    <div class="footer-col footer-about">
+                        <a class="site-brand" href="#" aria-label="Home">
+                            <img src="./media/shoe.jpg" alt="Logo" width="36" height="36">
+                        </a>
+                        <p class="footer-text">Everyday healthcare essentials, all in one place.</p>
+                        <div class="footer-social">
+                            <a href="#" class="icon-btn" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                            <a href="#" class="icon-btn" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                            <a href="#" class="icon-btn" aria-label="X"><i class="bi bi-twitter-x"></i></a>
+                            <a href="#" class="icon-btn" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+                        </div>
+                    </div>
+
+                    <nav class="footer-col" aria-label="Quick links">
+                        <h2 class="footer-title">Quick Links</h2>
+                        <ul class="footer-links">
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Pharmacy</a></li>
+                            <li><a href="#">Category</a></li>
+                            <li><a href="#">Brand</a></li>
+                        </ul>
+                    </nav>
+
+                    <nav class="footer-col" aria-label="Shop categories">
+                        <h2 class="footer-title">Categories</h2>
+                        <ul class="footer-links">
+                            <li><a href="#">Medicines</a></li>
+                            <li><a href="#">Vitamins</a></li>
+                            <li><a href="#">Skincare</a></li>
+                            <li><a href="#">First Aid</a></li>
+                            <li><a href="#">Personal Care</a></li>
+                        </ul>
+                    </nav>
+
+                    <div class="footer-col footer-contact-col">
+                        <h2 class="footer-title">Contact</h2>
+                        <ul class="footer-contact">
+                            <li><i class="bi bi-geo-alt"></i><span>Your address, City, State, India</span></li>
+                            <li><i class="bi bi-telephone"></i><a href="tel:+910000000000">+91 00000 00000</a></li>
+                            <li><i class="bi bi-envelope"></i><a href="mailto:support@yourpharmacy.com">support@yourpharmacy.com</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+
+                <div class="footer-bottom">
+                    <p class="footer-copy">&copy; 2026 Pharmacy. All rights reserved.</p>
+                    <ul class="footer-legal">
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Use</a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Saved items behaviour: remove, clear all, add to cart -->
+    <script>
+        (function () {
+            var grid = document.getElementById('savedGrid');
+            var body = document.getElementById('savedBody');
+            var empty = document.getElementById('savedEmpty');
+            var countEl = document.getElementById('savedCount');
+            var clearBtn = document.getElementById('clearAll');
+
+            function update() {
+                var n = grid.querySelectorAll('.saved-col').length;
+                countEl.textContent = n + (n === 1 ? ' item' : ' items');
+                body.hidden = n === 0;
+                empty.hidden = n !== 0;
+                clearBtn.hidden = n === 0;
+            }
+
+            grid.addEventListener('click', function (e) {
+                var unsave = e.target.closest('[data-action="unsave"]');
+                if (unsave) {
+                    unsave.closest('.saved-col').remove();
+                    update();
+                    return;
+                }
+
+                var add = e.target.closest('[data-action="add"]');
+                if (add) {
+                    var added = add.classList.toggle('is-added');
+                    add.querySelector('i').className = added ? 'bi bi-check2' : 'bi bi-cart-plus';
+                    add.querySelector('span').textContent = added ? 'In Cart' : 'Add to Cart';
+                }
+            });
+
+            clearBtn.addEventListener('click', function () {
+                grid.innerHTML = '';
+                update();
+            });
+
+            update();
+        })();
+    </script>
+
+</body>
+
+</html>

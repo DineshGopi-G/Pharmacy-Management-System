@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brands</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- Shared theme (same file as the home page) -->
+    <link rel="stylesheet" href="./styles/HomePage.css">
+
+    <!-- Brand page extras (load after the shared theme) -->
+    <link rel="stylesheet" href="./styles/BrandPage.css">
+</head>
+
+<body>
+
+    <!-- =====================================================
+         HEADER  (navbar + search bar)
+         ===================================================== -->
+    <header class="site-header">
+        <div class="container">
+
+            <nav class="site-nav bracket" aria-label="Main navigation">
+
+                <!-- Logo -->
+                <a class="site-brand" href="#" aria-label="Home">
+                    <img src="./media/shoe.jpg" alt="Logo" width="36" height="36">
+                </a>
+
+                <!-- Navigation Links -->
+                <ul class="site-links">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Pharmacy</a></li>
+                    <li><a href="#">Category</a></li>
+                    <li><a class="active" href="#" aria-current="page">Brand</a></li>
+                </ul>
+
+                <!-- Right-side Icons -->
+                <div class="site-actions">
+                    <a href="#" class="icon-btn" aria-label="Bookmarks">
+                        <i class="bi bi-bookmark"></i>
+                    </a>
+
+                    <a href="#" class="icon-btn" aria-label="Cart">
+                        <i class="bi bi-cart3"></i>
+                    </a>
+
+                    <a href="#" class="btn btn-primary">Login</a>
+                </div>
+
+            </nav>
+
+            <!-- Search Bar -->
+            <section class="panel bracket search-panel" aria-label="Search">
+                <form class="search-form" role="search">
+                    <input class="form-control search-input" type="search"
+                        placeholder="Search brands, medicines..." aria-label="Search brands">
+
+                    <button class="btn btn-primary" type="submit" aria-label="Search">
+                        <i class="bi bi-search"></i>
+                    </button>
+                </form>
+            </section>
+
+        </div>
+    </header>
+
+    <!-- =====================================================
+         MAIN CONTENT
+         ===================================================== -->
+    <main class="container page-main">
+
+        <h1 class="visually-hidden">Brands</h1>
+
+        <!-- Breadcrumb -->
+        <nav class="crumbs" aria-label="Breadcrumb">
+            <ol class="crumb-list">
+                <li><a href="#">Home</a></li>
+                <li aria-current="page">Brand</li>
+            </ol>
+        </nav>
+
+        <!-- Featured brand banner -->
+        <section class="panel bracket pharmacy-banner" aria-label="Featured brand">
+            <div class="banner-image">
+                <img src="./media/pharmacy-banner.jpg" alt="CareWell">
+            </div>
+
+            <div class="banner-content">
+                <p class="banner-tag">FEATURED BRAND</p>
+                <h2>CareWell</h2>
+                <h3>Trusted Care. Every Day.</h3>
+                <p class="banner-text">Everyday healthcare essentials from a brand you can rely on.</p>
+                <a href="#" class="btn btn-primary banner-btn">Shop CareWell</a>
+            </div>
+        </section>
+
+        <!-- All brands -->
+        <section class="panel bracket" aria-label="All brands">
+
+            <div class="panel-body">
+                <div class="row g-3">
+
+                    <div class="col-6 col-lg-3">
+                        <a href="#" class="brand-card h-100">
+                            <div class="brand-logo">
+                                <img src="./media/shoe.jpg" alt="CareWell logo">
+                            </div>
+                            <div class="brand-body">
+                                <h3 class="brand-name">CareWell</h3>
+                                <p class="brand-meta">32 Products</p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-6 col-lg-3">
+                        <a href="#" class="brand-card h-100">
+                            <div class="brand-logo">
+                                <img src="./media/watches.jpg" alt="PureLife logo">
+                            </div>
+                            <div class="brand-body">
+                                <h3 class="brand-name">PureLife</h3>
+                                <p class="brand-meta">28 Products</p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-6 col-lg-3">
+                        <a href="#" class="brand-card h-100">
+                            <div class="brand-logo">
+                                <img src="./media/headphones.jpg" alt="MediPlus logo">
+                            </div>
+                            <div class="brand-body">
+                                <h3 class="brand-name">MediPlus</h3>
+                                <p class="brand-meta">45 Products</p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-6 col-lg-3">
+                        <a href="#" class="brand-card h-100">
+                            <div class="brand-logo">
+                                <img src="./media/speaker.jpg" alt="VitaCore logo">
+                            </div>
+                            <div class="brand-body">
+                                <h3 class="brand-name">VitaCore</h3>
+                                <p class="brand-meta">19 Products</p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-6 col-lg-3">
+                        <a href="#" class="brand-card h-100">
+                            <div class="brand-logo">
+                                <img src="./media/earbuds.jpg" alt="HealthFirst logo">
+                            </div>
+                            <div class="brand-body">
+                                <h3 class="brand-name">HealthFirst</h3>
+                                <p class="brand-meta">37 Products</p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-6 col-lg-3">
+                        <a href="#" class="brand-card h-100">
+                            <div class="brand-logo">
+                                <img src="./media/shoe.jpg" alt="NutraPure logo">
+                            </div>
+                            <div class="brand-body">
+                                <h3 class="brand-name">NutraPure</h3>
+                                <p class="brand-meta">24 Products</p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-6 col-lg-3">
+                        <a href="#" class="brand-card h-100">
+                            <div class="brand-logo">
+                                <img src="./media/watches.jpg" alt="DermaCare logo">
+                            </div>
+                            <div class="brand-body">
+                                <h3 class="brand-name">DermaCare</h3>
+                                <p class="brand-meta">16 Products</p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-6 col-lg-3">
+                        <a href="#" class="brand-card h-100">
+                            <div class="brand-logo">
+                                <img src="./media/headphones.jpg" alt="FlexiCare logo">
+                            </div>
+                            <div class="brand-body">
+                                <h3 class="brand-name">FlexiCare</h3>
+                                <p class="brand-meta">21 Products</p>
+                            </div>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="panel bracket footer-panel">
+
+                <div class="footer-grid">
+
+                    <div class="footer-col footer-about">
+                        <a class="site-brand" href="#" aria-label="Home">
+                            <img src="./media/shoe.jpg" alt="Logo" width="36" height="36">
+                        </a>
+                        <p class="footer-text">Everyday healthcare essentials, all in one place.</p>
+                        <div class="footer-social">
+                            <a href="#" class="icon-btn" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                            <a href="#" class="icon-btn" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                            <a href="#" class="icon-btn" aria-label="X"><i class="bi bi-twitter-x"></i></a>
+                            <a href="#" class="icon-btn" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+                        </div>
+                    </div>
+
+                    <nav class="footer-col" aria-label="Quick links">
+                        <h2 class="footer-title">Quick Links</h2>
+                        <ul class="footer-links">
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Pharmacy</a></li>
+                            <li><a href="#">Category</a></li>
+                            <li><a href="#">Brand</a></li>
+                        </ul>
+                    </nav>
+
+                    <nav class="footer-col" aria-label="Shop categories">
+                        <h2 class="footer-title">Categories</h2>
+                        <ul class="footer-links">
+                            <li><a href="#">Medicines</a></li>
+                            <li><a href="#">Vitamins</a></li>
+                            <li><a href="#">Skincare</a></li>
+                            <li><a href="#">First Aid</a></li>
+                            <li><a href="#">Personal Care</a></li>
+                        </ul>
+                    </nav>
+
+                    <div class="footer-col footer-contact-col">
+                        <h2 class="footer-title">Contact</h2>
+                        <ul class="footer-contact">
+                            <li><i class="bi bi-geo-alt"></i><span>Your address, City, State, India</span></li>
+                            <li><i class="bi bi-telephone"></i><a href="tel:+910000000000">+91 00000 00000</a></li>
+                            <li><i class="bi bi-envelope"></i><a href="mailto:support@yourpharmacy.com">support@yourpharmacy.com</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+
+                <div class="footer-bottom">
+                    <p class="footer-copy">&copy; 2026 Pharmacy. All rights reserved.</p>
+                    <ul class="footer-legal">
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Use</a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
